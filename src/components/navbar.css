@@ -1,0 +1,15 @@
+.active {
+  color: red;
+}
+
+.activeSub {
+  color: blue;
+}
+
+.sub:hover {
+  color: blueviolet;
+}
+
+.off {
+  color: black;
+}
