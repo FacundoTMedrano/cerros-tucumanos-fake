@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li {
+    list-style: none;
+    padding-right: 25px;
+    border: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.parrafo-negrita {
+    font-weight:900;
+}
+.parrafo-cursiva{
+    
+}
+
+.navegacion {
+    border: 1px solid blue;
+}
+
+.navBarUl {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.navBarUl>li:hover {
+    background-color: grey;
+}
+
+.menuDesplegable {
+    border: 1px solid violet;
+    display: none;
+    position: absolute;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navBarUl li:hover .menuDesplegable {
+    display: block;
+}
+
+.menuDesplegable li:hover {
+    background-color: black;
+}
+
+.active {
+    color: red;
+}
+
+.off {
+    color: black;
+}
+
+.contactoForm {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+#texto {
+    resize: vertical;
 }

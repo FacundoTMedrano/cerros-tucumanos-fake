@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Inicio from "./components/Inicio";
+import Layout from "./components/Layout";
+import Productos from "./components/Productos";
+import Contacto from "./components/Contacto";
+import Historia from "./components/Historia";
+import YogurtProbiotico from "./components/YogurtProbiotico";
+import ActividadesAgricolas from "./components/ActividadesAgricolas";
+import Proyectos from "./components/Proyectos";
+import PresenteYFuturo from "./components/PresenteYFuturo";
+import NuestrosClientes from "./components/NuestrosClientes";
+import Elaboracion from "./components/Elaboracion";
+import Fotos from "./components/Fotos";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Inicio />} />
+        <Route path="productos" element={<Productos />} />
+        <Route path="contacto" element={<Contacto />} />
+        <Route path="historia" element={<Historia />} />
+        <Route path="yogurtproviotico" element={<YogurtProbiotico />} />
+        <Route path="actividadesagricolas" element={<ActividadesAgricolas />} />
+        <Route path="proyectos" element={<Proyectos />} />
+        <Route path="presenteyfuturo" element={<PresenteYFuturo />} />
+        <Route path="nuestrosclientes" element={<NuestrosClientes />} />
+        <Route path="elaboracion" element={<Elaboracion />} />
+        <Route path="fotos" element={<Fotos />} />
+      </Route>
+    </Routes>
   );
 }
 

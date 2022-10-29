@@ -3,16 +3,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
-// import "swiper/css/navigation";
 import imagenes from '../imagenes';
+import { IKImage } from "imagekitio-react";
 
 const Inicio = () => {
+
+    console.log(imagenes)
 
     const imgs = imagenes.imgInicio.map((x, i) => {
         return (
             <SwiperSlide key={i}>
                 <div>
-                    <img src={x} style={{ width: "300px", height: "300px" }} alt="imagen"></img>
+                    {/* <IKImage
+                        urlEndpoint={imagenes.urlEndpoint}
+                        path={x}
+                        transformation={{ "w": "300" }}
+                        lqip={{ active: true, quality: 20 }}
+                    /> */}
                 </div>
             </SwiperSlide>
         )
@@ -20,7 +27,13 @@ const Inicio = () => {
 
     return (
         <>
-            <img src={imagenes.logoCerrosTucumanos} style={{ width: "300px", height: "300px" }} alt="logo" />
+            {/* <img src={imagenes.logoCerrosTucumanos} style={{ width: "300px", height: "300px" }} alt="logo" /> */}
+            <IKImage
+                urlEndpoint={imagenes.urlEndpoint}
+                path={imagenes.imgInicio[1]}
+                transformation={[{ "w": 300 }]}
+            // lqip={{ active: true, quality: 20 }}
+            />
             <Swiper
                 className="mySwiper"
                 speed={1200}
