@@ -11,6 +11,7 @@ import PresenteYFuturo from "./components/PresenteYFuturo";
 import NuestrosClientes from "./components/NuestrosClientes";
 import Elaboracion from "./components/Elaboracion";
 import Fotos from "./components/Fotos";
+import Recetas from "./components/Recetas";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="nuestrosclientes" element={<NuestrosClientes />} />
         <Route path="elaboracion" element={<Elaboracion />} />
         <Route path="fotos" element={<Fotos />} />
+        <Route path="recetas" element={<Recetas />} />
       </Route>
     </Routes>
   );

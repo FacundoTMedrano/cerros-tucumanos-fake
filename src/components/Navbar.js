@@ -1,7 +1,9 @@
 import { NavLink, useLocation } from "react-router-dom";
-import SubNavBar from "./SubNavBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { IKImage } from "imagekitio-react";
+import imagenes from "../imagenes";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
 
@@ -11,6 +13,7 @@ export default function Navbar() {
     { titulo: "Nosotros", path: "/nosotros" },
     { titulo: "Elaboración", path: "/elaboracion" },
     { titulo: "Galeria de Fotos", path: "/fotos" },
+    { titulo: "Recetas", path: "/recetas" },
     { titulo: "Contacto", path: "/contacto" }
   ];
   const subDatos = [
@@ -27,14 +30,19 @@ export default function Navbar() {
 
   const dato = useLocation()
 
+  const subBar = subDatos.map((x, i) => {
+    return (
+      <li key={i}>
+        <NavLink className={"link"} to={x.path}> {x.titulo} </NavLink>
+      </li>
+    )
+  })
+
   const nav = navDatos.map((x, i) => {
     if (x.titulo !== "Nosotros") {
       return (
         <li key={i}>
-          <NavLink
-            to={x.path}
-            className={dato.pathname === x.path ? "active" : "off"}
-          >
+          <NavLink to={x.path} className={dato.pathname === x.path ? "navPrincipal link active" : "navPrincipal link off"}>
             {x.titulo}
           </NavLink>
         </li>
@@ -42,15 +50,14 @@ export default function Navbar() {
     } else {
       return (
         <li key={i}>
-          <NavLink
-            to={null}
-            className={listaSub.includes(dato.pathname) ? "active" : "off"}
-          >
+          <NavLink to={null} className={listaSub.includes(dato.pathname) ? "link active" : "link off"}>
             <span>{x.titulo} <FontAwesomeIcon icon={faCaretDown} /></span>
           </NavLink>
-          <ul className="menuDesplegable">
-            <SubNavBar subDatos={subDatos} />
-          </ul>
+          <div className="divMenuDesplegable">
+            <ul className="menuDesplegable">
+              {subBar}
+            </ul>
+          </div>
         </li>
       )
     }
@@ -59,9 +66,18 @@ export default function Navbar() {
   {/* <FontAwesomeIcon icon={faCaretDown} /> */ }
   return (
     <div className="navegacion">
-      <ul className="navBarUl">
-        {nav}
-      </ul>
+      <div className="fixieClass">
+        <div>
+          <IKImage
+            urlEndpoint={imagenes.urlEndpoint}
+            path={imagenes.logoCerrosTucumanos}
+            transformation={[{ "w": "150" }]}
+          />
+        </div>
+        <ul className="navBarUl">
+          {nav}
+        </ul>
+      </div>
     </div>
   );
 }

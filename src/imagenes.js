@@ -17,6 +17,6 @@ export default {
         "yogurt2_dh6x3LvYq.jpg",
         "foto_expo__copia_1___dow-N-GM.jpg"
     ],
-    logoCerrosTucumanos: "logo_1AcBD0cyf.jpg",
+    logoCerrosTucumanos: "CerrosTucumanos_navBar",
     urlEndpoint: "https://ik.imagekit.io/showimg/cerros-tucumanos"
 };

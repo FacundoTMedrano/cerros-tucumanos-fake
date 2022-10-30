@@ -5,34 +5,35 @@ import 'swiper/css';
 import "swiper/css/pagination";
 import imagenes from '../imagenes';
 import { IKImage } from "imagekitio-react";
-
+import { motion } from "framer-motion";
 const Inicio = () => {
-
-    console.log(imagenes)
 
     const imgs = imagenes.imgInicio.map((x, i) => {
         return (
             <SwiperSlide key={i}>
                 <div>
-                    {/* <IKImage
+                    <IKImage
                         urlEndpoint={imagenes.urlEndpoint}
                         path={x}
-                        transformation={{ "w": "300" }}
+                        transformation={[{ "w": "300" }]}
                         lqip={{ active: true, quality: 20 }}
-                    /> */}
+                    />
                 </div>
             </SwiperSlide>
         )
     })
 
     return (
-        <>
-            {/* <img src={imagenes.logoCerrosTucumanos} style={{ width: "300px", height: "300px" }} alt="logo" /> */}
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <IKImage
                 urlEndpoint={imagenes.urlEndpoint}
-                path={imagenes.imgInicio[1]}
+                path={imagenes.logoCerrosTucumanos}
                 transformation={[{ "w": 300 }]}
-            // lqip={{ active: true, quality: 20 }}
+                lqip={{ active: true, quality: 20 }}
             />
             <Swiper
                 className="mySwiper"
@@ -54,7 +55,7 @@ const Inicio = () => {
                     <p>nuestros productos</p>
                 </Link>
             </section>
-        </>
+        </motion.div>
     )
 };
 export default Inicio;
