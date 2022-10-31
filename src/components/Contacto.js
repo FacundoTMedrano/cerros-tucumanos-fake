@@ -11,7 +11,6 @@ const Contacto = () => {
 
     const cambios = (e) => {
         const { name, value } = e.target;
-        console.log(e.target.name, e.target.value)
         setFormulario(prev => {
             return { ...prev, [name]: value }
         })
@@ -23,11 +22,11 @@ const Contacto = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div>
+            <div className="tituloContacto">
                 <h1>Contacto</h1>
             </div>
-            <div className="contactoDiv">
-                <div>
+            <div className="contactoTargeta">
+                <div className="contactoTextoMapa">
                     <h2>Nuestra Empresa</h2>
                     <p>Envienos su consulta o inquietud, y le responderemos a la brevedad, le recordamos que nuestra area de entrega directa es en San Miguel de Tucuman y alrededores. Tambien realizamos entregas en el interior de Tucuman y Santiago del Estero.</p>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1779.5939127702266!2d-65.178161!3d-26.865773!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1667093784805!5m2!1ses-419!2sar" width="350" height="300" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
@@ -41,32 +40,34 @@ const Contacto = () => {
                         Email: info@cerrostucumanos.com
                     </p>
                 </div>
-                <div>
-
+                <div className="contactoFormulario">
                     <form className="contactoForm">
-                        <label htmlFor="nombre">nombre</label>
                         <input
                             type="text"
+                            placeholder="nombre"
                             id="nombre"
                             name="nombre"
                             onChange={cambios}
                             required
                         />
-                        <label htmlFor="email">email</label>
                         <input
                             type="email"
+                            placeholder="email"
                             required
                             id="email"
                             name="email"
                             onChange={cambios}
                         />
-                        <label htmlFor="texto">nota</label>
                         <textarea
+                            placeholder="mensaje"
                             id="texto"
                             required
                             name="texto"
                             onChange={cambios}
                         />
+                        <div>
+                            <button>enviar</button>
+                        </div>
                     </form>
                 </div>
             </div>

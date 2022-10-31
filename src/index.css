@@ -5,9 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+
 }
 
-li {
+ul {
     list-style: none;
 }
 
@@ -17,7 +18,6 @@ a {
 
 .navegacion {
     height: 90px;
-    font-size: 27px;
 }
 
 .fixieClass {
@@ -32,7 +32,26 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    font-size: 25px;
+}
+
+.navBarUl>li {
+    padding: 0 10px;
+}
+
+.menuDesplegable {
+    font-size: 20px;
+    visibility: hidden;
+    position: absolute;
+    width: 200px;
+    background-color: rgb(222, 229, 238);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.navBarUl li:hover .menuDesplegable {
+    visibility: visible;
+    opacity: 1;
 }
 
 .navBarUl li,
@@ -40,17 +59,7 @@ a {
     position: relative;
 }
 
-.menuDesplegable {
-    font-size: 20px;
-    display: none;
-    position: absolute;
-    width: 200px;
-    background-color: rgb(222, 229, 238);
-    opacity: 0;
-    transition: 1s;
-}
-
-a:after {
+.navBarUl a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -63,15 +72,9 @@ a:after {
     width: 0;
 }
 
-a:hover:after {
+.navBarUl a:hover:after {
     width: 100%;
     left: 0;
-}
-
-.navBarUl li:hover .menuDesplegable {
-    opacity: 1;
-    display: block;
-    color: black;
 }
 
 .active {
@@ -82,6 +85,7 @@ a:hover:after {
     color: black;
 }
 
+/*-------------- fin de navegacion -------------*/
 .contactoForm {
     display: flex;
     flex-direction: column;
@@ -106,6 +110,124 @@ a:hover:after {
     grid-auto-rows: 200px;
 }
 
-.contactoDiv {
+
+/*------------- find de galeria -------------*/
+.tituloContacto {
     display: flex;
+    justify-content: center;
+}
+
+.contactoTargeta {
+    display: flex;
+    margin: auto;
+    width: 800px;
+    /* border: 1px solid black; */
+}
+
+.contactoTextoMapa {}
+
+.contactoFormulario {
+    /* border: 1px solid black; */
+    padding-top: 150px;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.contactoForm input {
+    height: 40px;
+    margin: 5px;
+}
+
+.contactoForm textarea {
+    margin: 5px;
+}
+
+.contactoForm div {
+    margin: 5px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.contactoForm div button {
+    width: 80px;
+    height: 40px;
+    background-color: rgb(222, 229, 238);
+}
+
+/*--------- fin pagina de contacto ----------*/
+
+.productosContenedor {
+    /* border: 1px solid red; */
+    width: 800px;
+    display: block;
+    margin: auto;
+    padding-bottom: 40px;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}
+
+.productosContenedor img {
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.productosContenedorInicio {
+    background-color: rgb(222, 229, 238);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.productosContenedorInicio h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+/*------------ fin pagina productos -----------*/
+
+.contenedorInicio {
+    width: 800px;
+    margin: auto;
+}
+
+.inicioLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.mySwiper {
+    width: 300px;
+}
+
+/*---------------- fin pagina inicio ----------------*/
+.contenedorHistoria {
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}
+
+.contenedorHistoria article section {
+    padding: 20px 0;
+}
+
+.contenedorHistoria article section p {
+    padding: 5px 0;
+}
+
+.tituloPrincipalHistoria {
+    /* border: 1px solid red; */
+    width: fit-content;
+    display: block;
+    margin: auto;
 }

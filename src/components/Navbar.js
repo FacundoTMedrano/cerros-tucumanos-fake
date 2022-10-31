@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { IKImage } from "imagekitio-react";
 import imagenes from "../imagenes";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
 
@@ -12,7 +11,7 @@ export default function Navbar() {
     { titulo: "Productos", path: "/productos" },
     { titulo: "Nosotros", path: "/nosotros" },
     { titulo: "Elaboración", path: "/elaboracion" },
-    { titulo: "Galeria de Fotos", path: "/fotos" },
+    { titulo: "Galeria", path: "/fotos" },
     { titulo: "Recetas", path: "/recetas" },
     { titulo: "Contacto", path: "/contacto" }
   ];
@@ -33,7 +32,7 @@ export default function Navbar() {
   const subBar = subDatos.map((x, i) => {
     return (
       <li key={i}>
-        <NavLink className={"link"} to={x.path}> {x.titulo} </NavLink>
+        <NavLink className={dato.pathname === x.path ? "navLink active" : "navLink off"} to={x.path}> {x.titulo} </NavLink>
       </li>
     )
   })
@@ -42,7 +41,7 @@ export default function Navbar() {
     if (x.titulo !== "Nosotros") {
       return (
         <li key={i}>
-          <NavLink to={x.path} className={dato.pathname === x.path ? "navPrincipal link active" : "navPrincipal link off"}>
+          <NavLink to={x.path} className={dato.pathname === x.path ? "navLink active" : "navLink off"}>
             {x.titulo}
           </NavLink>
         </li>
@@ -50,20 +49,17 @@ export default function Navbar() {
     } else {
       return (
         <li key={i}>
-          <NavLink to={null} className={listaSub.includes(dato.pathname) ? "link active" : "link off"}>
+          <NavLink to={null} className={listaSub.includes(dato.pathname) ? "navLink active" : "navLink off"}>
             <span>{x.titulo} <FontAwesomeIcon icon={faCaretDown} /></span>
           </NavLink>
-          <div className="divMenuDesplegable">
-            <ul className="menuDesplegable">
-              {subBar}
-            </ul>
-          </div>
+          <ul className="menuDesplegable">
+            {subBar}
+          </ul>
         </li>
       )
     }
   })
 
-  {/* <FontAwesomeIcon icon={faCaretDown} /> */ }
   return (
     <div className="navegacion">
       <div className="fixieClass">

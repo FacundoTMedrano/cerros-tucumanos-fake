@@ -18,5 +18,10 @@ export default {
         "foto_expo__copia_1___dow-N-GM.jpg"
     ],
     logoCerrosTucumanos: "CerrosTucumanos_navBar",
-    urlEndpoint: "https://ik.imagekit.io/showimg/cerros-tucumanos"
+    urlEndpoint: "https://ik.imagekit.io/showimg/cerros-tucumanos",
+    productosPage:{
+        leche:"leche1_50GtAQYtV.jpg",
+        dulceDeLeche:"dulce-de-leche_8zE5lY6Sx.webp",
+        yogurt:"yogurt3_8qnKzrJsR.jpg"
+    }
 };

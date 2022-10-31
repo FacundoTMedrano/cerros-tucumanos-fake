@@ -5,9 +5,10 @@ const Historia = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            className="contenedorHistoria"
         >
             <article>
-                <h1>Historia de un Proyecto en permanente Expansion</h1>
+                <h1 className="tituloPrincipalHistoria">Historia de un Proyecto en permanente Expansion</h1>
                 <section>
                     <h2>Antecedentes</h2>
                     <p className="parrafo-negrita"><b>La Empresa unipersonal de José Lucas Medici viene desarrollando sus actividades desde noviembre de 1989, encontrándose él mismo al frente de su gerenciamiento general, previéndose su continuidad permanente. </b></p>

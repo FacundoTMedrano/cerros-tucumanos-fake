@@ -15,7 +15,7 @@ const Inicio = () => {
                     <IKImage
                         urlEndpoint={imagenes.urlEndpoint}
                         path={x}
-                        transformation={[{ "w": "300" }]}
+                        transformation={[{ "w": "300","h":"200" }]}
                         lqip={{ active: true, quality: 20 }}
                     />
                 </div>
@@ -28,13 +28,16 @@ const Inicio = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            className="contenedorInicio"
         >
-            <IKImage
-                urlEndpoint={imagenes.urlEndpoint}
-                path={imagenes.logoCerrosTucumanos}
-                transformation={[{ "w": 300 }]}
-                lqip={{ active: true, quality: 20 }}
-            />
+            <div className="inicioLogo">
+                <IKImage
+                    urlEndpoint={imagenes.urlEndpoint}
+                    path={imagenes.logoCerrosTucumanos}
+                    transformation={[{ "w": 300 }]}
+                    lqip={{ active: true, quality: 20 }}
+                />
+            </div>
             <Swiper
                 className="mySwiper"
                 speed={1200}
