@@ -29,10 +29,18 @@ export default function Navbar() {
 
   const dato = useLocation()
 
+  const goUp = (ubicacion) => {
+    if (dato.pathname === ubicacion) {
+      document.documentElement.scrollTo(0, 0);
+    } else {
+      return null
+    }
+  }
+
   const subBar = subDatos.map((x, i) => {
     return (
       <li key={i}>
-        <NavLink className={dato.pathname === x.path ? "navLink active" : "navLink off"} to={x.path}> {x.titulo} </NavLink>
+        <NavLink onClick={() => goUp(x.path)} className={dato.pathname === x.path ? "navLink active" : "navLink off"} to={x.path}> {x.titulo} </NavLink>
       </li>
     )
   })
@@ -41,7 +49,7 @@ export default function Navbar() {
     if (x.titulo !== "Nosotros") {
       return (
         <li key={i}>
-          <NavLink to={x.path} className={dato.pathname === x.path ? "navLink active" : "navLink off"}>
+          <NavLink to={x.path} onClick={() => goUp(x.path)} className={dato.pathname === x.path ? "navLink active" : "navLink off"}>
             {x.titulo}
           </NavLink>
         </li>

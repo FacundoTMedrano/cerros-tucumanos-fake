@@ -17,10 +17,8 @@ const Contacto = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        <div
+            className="c-contacto"
         >
             <div className="tituloContacto">
                 <h1>Contacto</h1>
@@ -71,7 +69,7 @@ const Contacto = () => {
                     </form>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 };
 export default Contacto;

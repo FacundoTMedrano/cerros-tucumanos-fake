@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
 const Proyectos = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        <div
+            className="c-proyectos"
         >
             <section>
                 <h2>Proyecto “Quesería”</h2>
@@ -21,7 +18,7 @@ const Proyectos = () => {
                     El objetivo a mediano plazo es utilizar la capacidad recientemente instalada de la fábrica y pasar de elaborar 18000 lts/día actuales, a 25000 lts/día; y así poder integrar la cadena productiva desde el inicio en el tambo, transporte de leche en camiones cisternas propios, fábrica-usina de elaboración, y transporte a los propios puntos de venta. </p>
             </section>
 
-        </motion.div>
+        </div>
     )
 };
 export default Proyectos;

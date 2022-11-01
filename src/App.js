@@ -12,8 +12,12 @@ import NuestrosClientes from "./components/NuestrosClientes";
 import Elaboracion from "./components/Elaboracion";
 import Fotos from "./components/Fotos";
 import Recetas from "./components/Recetas";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(()=>{
+    document.title="Cerros Tucumanos"
+  },[])
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

@@ -3,11 +3,8 @@ import imagenes from "../imagenes";
 import { IKImage } from "imagekitio-react";
 const Productos = () => {
     return (
-        <motion.div
+        <div
             className="productosContenedor"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
         >
             <article>
                 <section className="productosContenedorInicio">
@@ -50,7 +47,7 @@ const Productos = () => {
                     />
                 </section>
             </article>
-        </motion.div>
+        </div>
     )
 };
 

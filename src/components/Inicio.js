@@ -15,7 +15,7 @@ const Inicio = () => {
                     <IKImage
                         urlEndpoint={imagenes.urlEndpoint}
                         path={x}
-                        transformation={[{ "w": "300","h":"200" }]}
+                        transformation={[{ "w": "300", "h": "200" }]}
                         lqip={{ active: true, quality: 20 }}
                     />
                 </div>
@@ -24,12 +24,7 @@ const Inicio = () => {
     })
 
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="contenedorInicio"
-        >
+        <div className="contenedorInicio">
             <div className="inicioLogo">
                 <IKImage
                     urlEndpoint={imagenes.urlEndpoint}
@@ -58,7 +53,7 @@ const Inicio = () => {
                     <p>nuestros productos</p>
                 </Link>
             </section>
-        </motion.div>
+        </div>
     )
 };
 export default Inicio;

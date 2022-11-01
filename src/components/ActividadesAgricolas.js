@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
 const ActividadesAgricolas = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        <div
+            className="contenedorActividadesAgricolas"
         >
             <article>
                 <h1>Se suman nuevos productos lacteos</h1>
@@ -22,7 +19,7 @@ const ActividadesAgricolas = () => {
                     <p>Durante el periodo de la feria de ciencia y técnica (Tecnópolis 2013), “Cerros Tucumanos” fue invitada a participar de la misma, haciendo en el stand una réplica en maqueta tamaño natural del sector de elaboración de la fábrica. Se llevó desde Tucumán el “yogurito” elaborado y fraccionado, como también la maquina que realiza el envoltorio final, para poder entregar el producto a los visitantes en porciones individuales de 140 gr. Tuvo mucha aceptación la iniciativa, tanto que cuando en el mes de septiembre 2013 vinieron los ministros de Desarrollo Social de Sudamérica al predio, el stand fue elegido por el personal del Ministerio de Desarrollo Social de la Nación para el recorrido de la comitiva, encabezada por los ministros de Desarrollo Social Sra. Alicia Kirchner y el Ministro de Ciencia Tecnología e Innovación Tecnológica Dr. Lino Barañao para interiorizarse del proyecto y su viabilidad en replicarlo en sus países. (Foto del mismo) </p>
                 </section>
             </article>
-        </motion.div>
+        </div>
     )
 };
 export default ActividadesAgricolas;

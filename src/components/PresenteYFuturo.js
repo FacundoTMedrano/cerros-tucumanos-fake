@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
 const PresenteYFuturo = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        <div
+            className="c-proyectoYfuturo"
         >
             <article>
                 <h1>Impacto en la comunidad, integración y docencia</h1>
@@ -18,9 +15,10 @@ const PresenteYFuturo = () => {
                 <p>Tal estrategia permitió avanzar tanto en casos de integración vertical (uniendo al productor lechero con la transformación de la materia prima aportada); como en casos de integración horizontal al establecer relaciones con organismos universitarios, gubernamentales, científicos y técnicos que brindaran su valiosa colaboración para el éxito de “Cerros Tucumanos”.
                     Mención aparte merece destacarse la presencia de “Cerros Tucumanos” en las distintas exposiciones agroindustriales realizadas, En el año 2010, luego de los efectos negativos de la resolución 125 y ante la tensa relación entre las entidades del campo y la dirigencia política, fuimos invitados a la muestra Expo Rural Tucuman para ser parte de ella y asi mostrar la cadena productiva láctea del campo a la ciudad. A partir de allí, sucesivamente todos los años asistimos a la muestra Expo Rural, en un stand exterior, en donde se realiza promoción, degustación y venta de los productos de nuestra elaboración, acompañados de productos elaborados por nuestros clientes, como alfajores y nueces confitadas con dulce de leche Para ello se realiza el montaje de un estand amplio, con sala de proyección, muestrario de productos, degustación de los mismos e interacción con distintas delegaciones de alumnos que visitan la muestra.</p>
 
-                <p>La participación en los eventos señalados, sumado a la atención directa del Sr. José Lucas Medici con todas las organizaciones comprometidas con las distintas etapas de producción, capacitación, investigación y comercialización han permitido desarrollar distintas estrategias de ventas a través de técnicas de marketing personales y directas. . A partir del año 2012, comenzamos a participar de la feria Caminos y Sabores en la Sociedad Rural de Palermo en Buenos Aires, como para evaluar aceptación, y a futuro. Desde el inicio del dulce de leche, y con el transcurrir del tiempo, se fueron agregando productos a la línea de elaboración, en la actualidad contamos con :</p>
+                <p>La participación en los eventos señalados, sumado a la atención directa del Sr. José Lucas Medici con todas las organizaciones comprometidas con las distintas etapas de producción, capacitación, investigación y comercialización han permitido desarrollar distintas estrategias de ventas a través de técnicas de marketing personales y directas. . A partir del año 2012, comenzamos a participar de la feria Caminos y Sabores en la Sociedad Rural de Palermo en Buenos Aires, como para evaluar aceptación, y a futuro. Desde el inicio del dulce de leche, y con el transcurrir del tiempo, se fueron agregando productos a la línea de elaboración</p>
 
-                <div>
+                <div className="divUl-pyf">
+                    <h2>En la actualidad contamos con:</h2>
                     <ul>
                         <li>Leche entera y descremada</li>
                         <li>Yogur bebible parcialmente descremado sabor frutilla, vainilla y durazno</li>
@@ -37,7 +35,7 @@ const PresenteYFuturo = () => {
                     </ul>
                 </div>
             </article>
-        </motion.div>
+        </div>
     )
 };
 export default PresenteYFuturo;

@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 const Historia = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        <div
             className="contenedorHistoria"
         >
             <article>
@@ -32,7 +29,7 @@ const Historia = () => {
                     <p>A fines del año 94, una industria láctea de Tucumán (COOTAM) afrontó graves problemas económicos cesando su producción. Como consecuencia de ello dejó de comprar leche, por lo que un tambero nos propuso hacer dulce de leche con la leche del tambo de su propiedad. Fue así que luego de hacer la infraestructura para ello, en agosto del año 1996 se concreta la primera elaboración de dulce de leche para repostería, comenzando con una producción diaria de 500 lts de leche (unos 230 Kg. de dulce de leche), que se trasladaba en una camioneta desde el tambo en Benjamín Paz (Trancas) hasta fábrica. Al incorporar la elaboración del dulce de leche, se demandó más mano de obra. En ese entonces había 3 operarios en dulcería, 2 en fraccionado de miel y un administrativo. </p>
                 </section>
             </article>
-        </motion.div>
+        </div>
     )
 };
 

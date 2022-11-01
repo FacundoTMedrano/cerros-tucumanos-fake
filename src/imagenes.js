@@ -10,7 +10,8 @@ export default {
         "foto_8_8Dp8JZh7j4.jpg",
         "foto_9_qCQCLiYbj.jpg",
         "foto_10_2JQ7ae6mw.jpg",
-        "foto_11_qvgZ_Ce7v.jpg"
+        "foto_11_qvgZ_Ce7v.jpg",
+        "fabricaDentro_-P9QMj-BH.jpg"
     ],
     imgInicio: [
         "mozzarella3__copia_1__yysXYILeq.jpg",

@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
-
 }
 
 ul {
@@ -14,6 +13,16 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .navegacion {
@@ -25,6 +34,7 @@ a {
     display: flex;
     justify-content: space-evenly;
     position: fixed;
+    z-index: 20000;
     width: 100vw;
 }
 
@@ -86,32 +96,32 @@ a {
 }
 
 /*-------------- fin de navegacion -------------*/
-.contactoForm {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-}
-
-#texto {
-    resize: vertical;
-}
 
 .galeriaGrid {
-    position: relative;
-    z-index: -10;
-    margin: 20px;
+    width: 800px;
+    margin: auto;
     display: grid;
-    height: auto;
-    position: relative;
-    top: 70px;
-    grid-gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-flow: dense;
-    grid-auto-rows: 200px;
+    grid-auto-rows: 150px;
+    animation: fadeIn 1s forwards;
+    /* border: 1px solid red; */
+}
+.g-contDivDeimg{
+    /* border: 1px solid red; */
+    /* width: fit-content; */
+    /* height: fit-content; */
+}
+.imgFotos{
+    /* border: 1px solid red; */
 }
 
-
 /*------------- find de galeria -------------*/
+.c-contacto {
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
+}
+
 .tituloContacto {
     display: flex;
     justify-content: center;
@@ -121,16 +131,10 @@ a {
     display: flex;
     margin: auto;
     width: 800px;
-    /* border: 1px solid black; */
 }
 
-.contactoTextoMapa {}
-
 .contactoFormulario {
-    /* border: 1px solid black; */
     padding-top: 150px;
-    /* display: flex; */
-    /* align-items: center; */
 }
 
 .contactoForm input {
@@ -144,7 +148,6 @@ a {
 
 .contactoForm div {
     margin: 5px;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
 }
@@ -158,7 +161,6 @@ a {
 /*--------- fin pagina de contacto ----------*/
 
 .productosContenedor {
-    /* border: 1px solid red; */
     width: 800px;
     display: block;
     margin: auto;
@@ -166,6 +168,9 @@ a {
     font-size: 18px;
     word-spacing: 10px;
     letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
 }
 
 .productosContenedor img {
@@ -197,11 +202,16 @@ a {
 .contenedorInicio {
     width: 800px;
     margin: auto;
+    position: relative;
+    z-index: -20px;
+    animation: fadeIn 1s forwards;
+    
 }
 
 .inicioLogo {
-    display: flex;
-    justify-content: center;
+    /* border: 1px solid red; */
+    width: fit-content;
+    margin: auto;
 }
 
 .mySwiper {
@@ -215,6 +225,10 @@ a {
     font-size: 18px;
     word-spacing: 10px;
     letter-spacing: 2px;
+    position: relative;
+    z-index: -20px;
+    animation: fadeIn 1s forwards;
+    overflow: hidden;
 }
 
 .contenedorHistoria article section {
@@ -230,4 +244,155 @@ a {
     width: fit-content;
     display: block;
     margin: auto;
+}
+
+/*---------------- fin de pagina historia ----------------*/
+.contenedorElaboracion {
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
+}
+
+.contenedorElaboracion article section {
+    padding: 20px 0;
+}
+
+.contenedorElaboracion article section p {
+    padding: 5px 0;
+}
+
+.tituloPrincipalElaboracion {
+    background-color: rgb(222, 229, 238);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    /* padding: 20px; */
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.tituloPrincipalElaboracion p {
+    text-align: center;
+}
+
+/*------------ fin de pagina Elaboracion -------------*/
+.contenedorYogurtPage {
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
+}
+
+.contenedorYogurtPage article p {
+    padding: 10px 0;
+}
+
+.divUlYogurtPage {
+    background-color: rgb(222, 229, 238);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.divUlYogurtPage li {
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+/*------------- fin pagina yogurt ------------*/
+.contenedorActividadesAgricolas {
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
+}
+
+.contenedorActividadesAgricolas h1 {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    background-color: rgb(222, 229, 238);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.contenedorActividadesAgricolas section {
+    padding: 20px 0;
+}
+
+.contenedorActividadesAgricolas section p {
+    padding: 5px 0;
+}
+
+/*------------ fin pagina actividades agricolas ------------*/
+.c-proyectos {
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
+}
+
+.c-proyectos section {
+    padding: 15px 0;
+}
+
+.c-proyectos section p {
+    padding: 10px 0;
+}
+
+/*--------------- fin pagina proyectos --------------*/
+.c-proyectoYfuturo {
+    width: 800px;
+    margin: auto;
+    font-size: 18px;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeIn 1s forwards;
+    z-index: -20;
+}
+
+.c-proyectoYfuturo p {
+    padding: 10px 0;
+}
+
+.divUl-pyf {
+    background-color: rgb(222, 229, 238);
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.divUl-pyf li {
+    /* font-size: 15px; */
+    padding: 5px 0;
 }

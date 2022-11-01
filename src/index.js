@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
+import Wrapper from './components/Wrapper';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path='/*' element={<App />} />
-    </Routes>
+    <Wrapper>
+      <Navbar />
+      <Routes>
+        <Route path='/*' element={<App />} />
+      </Routes>
+    </Wrapper>
   </BrowserRouter>
 );

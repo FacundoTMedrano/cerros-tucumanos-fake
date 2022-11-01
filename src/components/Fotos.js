@@ -1,15 +1,15 @@
-import { motion } from "framer-motion";
 import imagenes from "../imagenes";
 import { IKImage } from 'imagekitio-react';
 const Fotos = () => {
 
     const datos = imagenes.imgGaleria.map((x, i) => {
         return (
-            <div key={i}>
+            <div className="g-contDivDeimg" key={i}>
                 <IKImage
+                    className="imgFotos"
                     urlEndpoint={imagenes.urlEndpoint}
                     path={x}
-                    transformation={[{ "w": "200" }]}
+                    transformation={[{ "w": "200", "h": "150" }]}
                     lqip={{ active: true, quality: 20 }}
                 />
             </div>
@@ -17,14 +17,9 @@ const Fotos = () => {
     })
 
     return (
-        <motion.div
-            className="galeriaGrid"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-        >
+        <div className="galeriaGrid">
             {datos}
-        </motion.div>
+        </div>
     )
 };
 
