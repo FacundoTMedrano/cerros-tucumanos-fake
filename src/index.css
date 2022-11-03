@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+    /* scroll-behavior: smooth; */
 }
 
 ul {
@@ -34,7 +35,7 @@ a {
     display: flex;
     justify-content: space-evenly;
     position: fixed;
-    z-index: 20000;
+    z-index: 2000;
     width: 100vw;
 }
 
@@ -99,6 +100,7 @@ a {
 
 .galeriaGrid {
     width: 800px;
+    padding-top: 20px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -106,14 +108,7 @@ a {
     animation: fadeIn 1s forwards;
     /* border: 1px solid red; */
 }
-.g-contDivDeimg{
-    /* border: 1px solid red; */
-    /* width: fit-content; */
-    /* height: fit-content; */
-}
-.imgFotos{
-    /* border: 1px solid red; */
-}
+
 
 /*------------- find de galeria -------------*/
 .c-contacto {
@@ -205,7 +200,7 @@ a {
     position: relative;
     z-index: -20px;
     animation: fadeIn 1s forwards;
-    
+
 }
 
 .inicioLogo {
@@ -214,8 +209,17 @@ a {
     margin: auto;
 }
 
-.mySwiper {
+.mySwiper2 {
     width: 300px;
+}
+
+.mySwiper {
+    width: 600px;
+}
+
+.imgSwiperGaleria {
+    display: block;
+    margin: auto;
 }
 
 /*---------------- fin pagina inicio ----------------*/
@@ -244,6 +248,18 @@ a {
     width: fit-content;
     display: block;
     margin: auto;
+}
+
+.floatHistoria {
+    float: right;
+    width: 220px;
+    border: 5px solid rgb(187, 203, 223);
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.79);
+    -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.79);
+    margin: 10px;
 }
 
 /*---------------- fin de pagina historia ----------------*/
@@ -395,4 +411,20 @@ a {
 .divUl-pyf li {
     /* font-size: 15px; */
     padding: 5px 0;
+}
+
+/* ----- */
+.modal-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(222, 229, 238, 0.5);
+    overflow: scroll;
+    position: absolute;
+    z-index: 2002;
+    top: 84px;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    /* border: 1px solid red; */
 }

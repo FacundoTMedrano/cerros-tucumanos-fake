@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/pagination";
 import imagenes from '../imagenes';
 import { IKImage } from "imagekitio-react";
-import { motion } from "framer-motion";
 const Inicio = () => {
 
     const imgs = imagenes.imgInicio.map((x, i) => {
@@ -34,7 +33,7 @@ const Inicio = () => {
                 />
             </div>
             <Swiper
-                className="mySwiper"
+                className="mySwiper2"
                 speed={1200}
                 pagination={{ clickable: true }}
                 navigation={true}

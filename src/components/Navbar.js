@@ -31,7 +31,7 @@ export default function Navbar() {
 
   const goUp = (ubicacion) => {
     if (dato.pathname === ubicacion) {
-      document.documentElement.scrollTo(0, 0);
+      document.documentElement.scrollTo({top:0,behavior:"smooth"});
     } else {
       return null
     }

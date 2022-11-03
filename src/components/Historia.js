@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import imagenes from "../imagenes";
+import { IKImage } from "imagekitio-react";
 const Historia = () => {
     return (
         <div
@@ -8,6 +9,13 @@ const Historia = () => {
                 <h1 className="tituloPrincipalHistoria">Historia de un Proyecto en permanente Expansion</h1>
                 <section>
                     <h2>Antecedentes</h2>
+                    <IKImage
+                        className="floatHistoria"
+                        urlEndpoint={imagenes.urlEndpoint}
+                        path={imagenes.logoCerrosTucumanos}
+                        transformation={[{ "w": "200" }]}
+                        lqip={{ active: true, quality: 20 }}
+                    />
                     <p className="parrafo-negrita"><b>La Empresa unipersonal de José Lucas Medici viene desarrollando sus actividades desde noviembre de 1989, encontrándose él mismo al frente de su gerenciamiento general, previéndose su continuidad permanente. </b></p>
 
                     <p>La idea surgió en el año 1989, luego de efectuar los primeros pasos comerciales vendiendo los productos elaborados por los Monjes Benedictinos de la abadía Cristo Rey, situada en El Siambón a 70 Km. al noroeste de la provincia de Tucumán. Pasados unos meses de la comercialización de los productos que ellos realizaban (miel de abejas, dulce de leche y dulces regionales), devino un periodo de desabastecimiento general de materias primas; lo que diera origen a una pausa productiva, mermando la comercialización de sus productos. </p>
